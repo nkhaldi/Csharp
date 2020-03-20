@@ -1,6 +1,6 @@
 using System;
 
-namespace Hello {
+namespace quadricEquations {
 	class Program {
 		static void Main(string[] args) {
 
