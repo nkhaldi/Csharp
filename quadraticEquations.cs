@@ -20,30 +20,41 @@ namespace quadricEquations {
 			Console.WriteLine();
 
 			if (a != 0)
-				if (!solveQuadric(a, b, c))
-					Console.WriteLine("No real solutions!");
-				else
-					Console.WriteLine("");
+				solveQuadric(a, b, c);
 			else if (b != 0)
 				solveLinear(b, c);
+			else if (c != 0)
+				Console.WriteLine("No solutions!");
 			else
-				Console.WriteLine("");
-
+				Console.WriteLine("0 = 0");
 		}
 
-		static bool solveQuadric(double a, double b, double c) {
+		static void solveQuadric(double a, double b, double c) {
 			double diskr = b * b - 4 * a * c;
 
-			if (diskr < 0)
-				return false;
+			if (diskr >= 0)
+				solveReal(a, b, diskr);
+			else
+				solveComplex(a, b, diskr);
+		}
 
+		static void solveReal(double a, double b, double diskr) {
 			diskr = Math.Sqrt(diskr);
 			double x1 = (-b - diskr) / (2 * a);
 			double x2 = (-b + diskr) / (2 * a);
 
 			Console.WriteLine($"x1 = {x1}");
 			Console.WriteLine($"x2 = {x2}");
-			return true;
+		}
+
+		static void solveComplex(double a, double b, double diskr) {
+			double alpha = -b / (2*a);
+			double beta = Math.Sqrt(-diskr) / (2*a);
+			string x1 = $"{alpha} + {beta}i";
+			string x2 = $"{alpha} - {beta}i";
+
+			Console.WriteLine($"x1 = {x1}");
+			Console.WriteLine($"x2 = {x2}");
 		}
 
 		static void solveLinear(double b, double c) {
