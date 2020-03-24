@@ -5,9 +5,10 @@
 
 using System;
 
-public class MainClass {
-	static void Main(string[] args) {
-
+public class MainClass
+{
+	static void Main(string[] args)
+	{
 		Console.WriteLine("Enter parameter of:");
 		Console.WriteLine("ax^2 + bx + c = 0");
 		Console.Write("a = ");
@@ -27,7 +28,8 @@ public class MainClass {
 			Console.WriteLine("No solutions!");
 	}
 
-	static void SolveQuadric(double a, double b, double c) {
+	static void SolveQuadric(double a, double b, double c)
+	{
 		double diskr = b * b - 4 * a * c;
 
 		if (diskr >= 0)
@@ -36,7 +38,8 @@ public class MainClass {
 			SolveComplex(a, b, diskr);
 	}
 
-	static void SolveReal(double a, double b, double diskr) {
+	static void SolveReal(double a, double b, double diskr)
+	{
 		diskr = Math.Sqrt(diskr);
 		double x1 = (-b - diskr) / (2 * a);
 		double x2 = (-b + diskr) / (2 * a);
@@ -48,7 +51,8 @@ public class MainClass {
 		Console.WriteLine($"x2 = {x2}");
 	}
 
-	static void SolveComplex(double a, double b, double diskr) {
+	static void SolveComplex(double a, double b, double diskr)
+	{
 		double alpha = -b / (2*a);
 		double beta = Math.Sqrt(-diskr) / (2*a);
 		string x1 = $"{alpha} + {beta}i";
@@ -58,12 +62,14 @@ public class MainClass {
 		Console.WriteLine($"x2 = {x2}");
 	}
 
-	static void SolveLinear(double b, double c) {
+	static void SolveLinear(double b, double c)
+	{
 		double x = -c / b;
 		Console.WriteLine($"x = {x}");
 	}
 
-	static void WriteEqution(double a, double b, double c) {
+	static void WriteEqution(double a, double b, double c)
+	{
 			if (a == 0)
 				Pass();
 			else
@@ -106,14 +112,16 @@ public class MainClass {
 			Console.WriteLine(" = 0");
 	}
 
-	static void Swap<T>(ref T a, ref T b) {
+	static void Swap<T>(ref T a, ref T b)
+	{
 		T temp;
 		temp = a;
 		a = b;
 		b = temp;
 	}
 
-	static void Pass() {
+	static void Pass()
+	{
 		return;
 	}
 }
