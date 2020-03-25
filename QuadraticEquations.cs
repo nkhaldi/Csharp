@@ -5,7 +5,7 @@
 
 using System;
 
-public class MainClass
+public class QuadraticEquations
 {
 	static void Main(string[] args)
 	{
