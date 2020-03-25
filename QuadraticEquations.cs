@@ -7,7 +7,7 @@ using System;
 
 public class QuadraticEquations
 {
-	static void Main(string[] args)
+	public static void Main(string[] args)
 	{
 		Console.WriteLine("Enter parameter of:");
 		Console.WriteLine("ax^2 + bx + c = 0");
@@ -28,7 +28,7 @@ public class QuadraticEquations
 			Console.WriteLine("No solutions!");
 	}
 
-	static void SolveQuadric(double a, double b, double c)
+	public static void SolveQuadric(double a, double b, double c)
 	{
 		double diskr = b * b - 4 * a * c;
 
@@ -38,7 +38,7 @@ public class QuadraticEquations
 			SolveComplex(a, b, diskr);
 	}
 
-	static void SolveReal(double a, double b, double diskr)
+	public static void SolveReal(double a, double b, double diskr)
 	{
 		diskr = Math.Sqrt(diskr);
 		double x1 = (-b - diskr) / (2 * a);
@@ -51,7 +51,7 @@ public class QuadraticEquations
 		Console.WriteLine($"x2 = {x2}");
 	}
 
-	static void SolveComplex(double a, double b, double diskr)
+	public static void SolveComplex(double a, double b, double diskr)
 	{
 		double alpha = -b / (2*a);
 		double beta = Math.Sqrt(-diskr) / (2*a);
@@ -62,13 +62,13 @@ public class QuadraticEquations
 		Console.WriteLine($"x2 = {x2}");
 	}
 
-	static void SolveLinear(double b, double c)
+	public static void SolveLinear(double b, double c)
 	{
 		double x = -c / b;
 		Console.WriteLine($"x = {x}");
 	}
 
-	static void WriteEqution(double a, double b, double c)
+	public static void WriteEqution(double a, double b, double c)
 	{
 			if (a == 0)
 				Pass();
@@ -112,7 +112,7 @@ public class QuadraticEquations
 			Console.WriteLine(" = 0");
 	}
 
-	static void Swap<T>(ref T a, ref T b)
+	public static void Swap<T>(ref T a, ref T b)
 	{
 		T temp;
 		temp = a;
@@ -120,7 +120,7 @@ public class QuadraticEquations
 		b = temp;
 	}
 
-	static void Pass()
+	public static void Pass()
 	{
 		return;
 	}
