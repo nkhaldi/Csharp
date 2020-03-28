@@ -11,7 +11,7 @@
 
 using System;
 
-public class MainClass {
+public class Automorphic {
     public static void Main() {
         long k = Convert.ToInt64(Console.ReadLine());
 
