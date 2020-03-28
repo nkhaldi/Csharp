@@ -7,10 +7,8 @@
 
 using System;
 
-public class MainClass
-{
-	public static void Main()
-	{
+public class MainClass {
+	public static void Main() {
 		int x = Convert.ToInt32(Console.ReadLine());
 		int x1 = x / 1000;
 		int x2 = x % 1000 / 100;
