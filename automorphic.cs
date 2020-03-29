@@ -21,7 +21,7 @@ public class Automorphic {
         Console.WriteLine("");
     }
     
-    public static bool IsAutomorphic(long number) {
+    static bool IsAutomorphic(long number) {
         int len = 0;
         long reserve = number;
 

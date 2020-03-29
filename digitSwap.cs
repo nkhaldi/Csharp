@@ -24,7 +24,7 @@ public class MainClass {
 		Console.WriteLine(max);
 	}
 
-	public static int Max4(int x1, int x2, int x3, int x4) {
+	static int Max4(int x1, int x2, int x3, int x4) {
 		int m12 = Math.Max(x1, x2);
 		int m34 = Math.Max(x3, x4);
 		int max = Math.Max(m12, m34);
