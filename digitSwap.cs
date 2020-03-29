@@ -7,7 +7,7 @@
 
 using System;
 
-public class MainClass {
+public class DigitSwap {
 	public static void Main() {
 		int x = Convert.ToInt32(Console.ReadLine());
 		int x1 = x / 1000;
