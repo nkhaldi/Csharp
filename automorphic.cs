@@ -13,7 +13,7 @@ using System;
 
 public class Automorphic {
     public static void Main() {
-        long k = Convert.ToInt64(Console.ReadLine());
+        long k = long.Parse(Console.ReadLine());
 
         for (long num = 0; num <= k; num++)
             if (IsAutomorphic(num))

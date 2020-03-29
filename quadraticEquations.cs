@@ -10,11 +10,11 @@ public class QuadraticEquations {
 		Console.WriteLine("Enter parameter of:");
 		Console.WriteLine("ax^2 + bx + c = 0");
 		Console.Write("a = ");
-		double a = Convert.ToDouble(Console.ReadLine());
+		double a = double.Parse(Console.ReadLine());
 		Console.Write("b = ");
-		double b = Convert.ToDouble(Console.ReadLine());
+		double b = double.Parse(Console.ReadLine());
 		Console.Write("c = ");
-		double c = Convert.ToDouble(Console.ReadLine());
+		double c = double.Parse(Console.ReadLine());
 		Console.WriteLine();
 
 		WriteEqution(a, b, c);

@@ -7,7 +7,7 @@ using System.Text;
 
 public class DecimalToRoman {
 	public static void Main() {
-		int dec = Convert.ToInt32(Console.ReadLine());
+		int dec = int.Parse(Console.ReadLine());
 		string rom = DecToRom(dec);
 		Console.WriteLine(rom);
 	}

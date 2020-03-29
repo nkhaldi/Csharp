@@ -9,7 +9,7 @@ using System;
 
 public class DigitSwap {
 	public static void Main() {
-		int x = Convert.ToInt32(Console.ReadLine());
+		int x = int.Parse(Console.ReadLine());
 		int x1 = x / 1000;
 		int x2 = x % 1000 / 100;
 		int x3 = x % 100 / 10;
