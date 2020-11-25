@@ -22,16 +22,12 @@ using System;
 public class LongWords {
     public static void Main() {
         int n = Convert.ToInt32(Console.ReadLine());
-        string str;
+
         for (int i = 1; i <= n; i++) {
-            str = Console.ReadLine();
+            string str = Console.ReadLine();
             int len = str.Length;
-            char a = str[0];
-            char b = str[len-1];
             if (len > 10) {
-                Console.Write(a);
-                Console.Write(len - 2);
-                Console.WriteLine(b);
+                Console.WriteLine(str[0] + (len - 2).ToString() + str[len-1]);
             } else {
                 Console.WriteLine(str);
             }
